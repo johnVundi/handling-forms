@@ -1,27 +1,28 @@
 import React, { useState } from 'react'
 
-function BookCreate({onCreate}) {
-    const [tittle, setTittle] = useState('')
+function BookCreate({ onCreate }) {
+    const [title, setTitle] = useState('')
 
-    const handleChange = (event) =>{
-        setTittle(event.target.value)
+    const handleChange = (event) => {
+        setTitle(event.target.value)
     }
 
-    const handleSubmit = (event) =>{
+    const handleSubmit = (event) => {
         event.preventDefault();
-        onCreate(tittle)
-        setTittle('')
+        onCreate(title)
+        setTitle('')
     }
 
-  return (
-    <div>
-        <form onSubmit={handleSubmit}>
-            <label>Tittle</label>
-            <input value={tittle} onChange={handleChange} />
-            <button>submit</button>
-        </form>
-    </div>
-  )
+    return (
+        <div className='book-create'>
+            <h3>Add a Book </h3>
+            <form onSubmit={handleSubmit}>
+                <label>Title</label>
+                <input className='input' value={title} onChange={handleChange} />
+                <button className='button'>submit</button>
+            </form>
+        </div>
+    )
 }
 
 export default BookCreate
