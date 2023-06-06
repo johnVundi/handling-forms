@@ -1,20 +1,12 @@
 {
   "books": [
     {
-      "title": "pota",
+      "title": "the updated book",
       "id": 1
     },
     {
       "title": "good morning",
       "id": 2
-    },
-    {
-      "title": "today",
-      "id": 3
-    },
-    {
-      "title": "ja bless",
-      "id": 4
     }
   ]
 }
