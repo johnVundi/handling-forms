@@ -3,6 +3,7 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App'
+import {Provider} from './context/BooksContext';
 // import SearchBar from './components/SearchBar';
 
 // Get a reference to the div with ID root
@@ -15,6 +16,11 @@ const root = ReactDOM.createRoot(el);
 
 
 // show the component to the screen
-root.render( <App />);
+root.render(
+    <Provider>
+        <App />
+    </Provider>
+       
+     );
 
 
